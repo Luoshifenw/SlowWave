@@ -6,13 +6,34 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		FE4725703C0477EB2887942E /* Pods_SlowWave.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCFDE9D467B740E21FE7AA69 /* Pods_SlowWave.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		C2563F4A508BF58FA9ED274B /* Pods-SlowWave.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowWave.release.xcconfig"; path = "Target Support Files/Pods-SlowWave/Pods-SlowWave.release.xcconfig"; sourceTree = "<group>"; };
 		D60D9C642F0F40B40040D05E /* SlowWave.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlowWave.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBBC15FC929225059A224B8E /* Pods-SlowWave.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlowWave.debug.xcconfig"; path = "Target Support Files/Pods-SlowWave/Pods-SlowWave.debug.xcconfig"; sourceTree = "<group>"; };
+		FCFDE9D467B740E21FE7AA69 /* Pods_SlowWave.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlowWave.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D60D9C7F2F0F42F40040D05E /* Exceptions for "SlowWave" folder in "SlowWave" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Config.xcconfig,
+				Info.plist,
+			);
+			target = D60D9C632F0F40B40040D05E /* SlowWave */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D60D9C662F0F40B40040D05E /* SlowWave */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D60D9C7F2F0F42F40040D05E /* Exceptions for "SlowWave" folder in "SlowWave" target */,
+			);
 			path = SlowWave;
 			sourceTree = "<group>";
 		};
@@ -23,17 +44,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE4725703C0477EB2887942E /* Pods_SlowWave.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		828B523390CB79117ED60659 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBBC15FC929225059A224B8E /* Pods-SlowWave.debug.xcconfig */,
+				C2563F4A508BF58FA9ED274B /* Pods-SlowWave.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		89C703CBB619FFC5FD11D83C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCFDE9D467B740E21FE7AA69 /* Pods_SlowWave.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D60D9C5B2F0F40B40040D05E = {
 			isa = PBXGroup;
 			children = (
 				D60D9C662F0F40B40040D05E /* SlowWave */,
 				D60D9C652F0F40B40040D05E /* Products */,
+				828B523390CB79117ED60659 /* Pods */,
+				89C703CBB619FFC5FD11D83C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,9 +94,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D60D9C6F2F0F40B50040D05E /* Build configuration list for PBXNativeTarget "SlowWave" */;
 			buildPhases = (
+				5466C70CBBC1D9C167A6D200 /* [CP] Check Pods Manifest.lock */,
 				D60D9C602F0F40B40040D05E /* Sources */,
 				D60D9C612F0F40B40040D05E /* Frameworks */,
 				D60D9C622F0F40B40040D05E /* Resources */,
+				604B16CC9F58BCD3761BD6B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -64,8 +108,6 @@
 				D60D9C662F0F40B40040D05E /* SlowWave */,
 			);
 			name = SlowWave;
-			packageProductDependencies = (
-			);
 			productName = SlowWave;
 			productReference = D60D9C642F0F40B40040D05E /* SlowWave.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +156,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5466C70CBBC1D9C167A6D200 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SlowWave-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		604B16CC9F58BCD3761BD6B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowWave/Pods-SlowWave-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SlowWave/Pods-SlowWave-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SlowWave/Pods-SlowWave-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D60D9C602F0F40B40040D05E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -127,6 +211,8 @@
 /* Begin XCBuildConfiguration section */
 		D60D9C6D2F0F40B50040D05E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D60D9C662F0F40B40040D05E /* SlowWave */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -163,7 +249,7 @@
 				DEVELOPMENT_TEAM = 2PW6AW2BUN;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -189,6 +275,8 @@
 		};
 		D60D9C6E2F0F40B50040D05E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = D60D9C662F0F40B40040D05E /* SlowWave */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -225,7 +313,7 @@
 				DEVELOPMENT_TEAM = 2PW6AW2BUN;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -243,9 +331,13 @@
 		};
 		D60D9C702F0F40B50040D05E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBC15FC929225059A224B8E /* Pods-SlowWave.debug.xcconfig */;
+			baseConfigurationReferenceAnchor = D60D9C662F0F40B40040D05E /* SlowWave */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_NULLABILITY_COMPLETENESS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PW6AW2BUN;
@@ -254,6 +346,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = SlowWave/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要麦克风进行语音对话。";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -265,10 +360,11 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = "$(inherited) -Wno-nullability-completeness";
 				PRODUCT_BUNDLE_IDENTIFIER = MZS.SlowWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -276,6 +372,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
@@ -287,9 +384,13 @@
 		};
 		D60D9C712F0F40B50040D05E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2563F4A508BF58FA9ED274B /* Pods-SlowWave.release.xcconfig */;
+			baseConfigurationReferenceAnchor = D60D9C662F0F40B40040D05E /* SlowWave */;
+			baseConfigurationReferenceRelativePath = Config.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_WARN_NULLABILITY_COMPLETENESS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2PW6AW2BUN;
@@ -298,6 +399,9 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				INFOPLIST_FILE = SlowWave/Info.plist;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "需要麦克风进行语音对话。";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -309,10 +413,11 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
-				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 26.2;
 				MARKETING_VERSION = 1.0;
+				OTHER_CFLAGS = "$(inherited) -Wno-nullability-completeness";
 				PRODUCT_BUNDLE_IDENTIFIER = MZS.SlowWave;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
@@ -320,6 +425,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = NO;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;

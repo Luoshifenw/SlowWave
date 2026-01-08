@@ -1,0 +1,12 @@
+# Xcode
+*.xcuserstate
+*.xcuserdata/
+xcuserdata/
+**/xcuserdata/
+DerivedData/
+
+# CocoaPods
+Pods/
+
+# Secrets
+Config.xcconfig

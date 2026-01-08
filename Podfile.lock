@@ -1,0 +1,22 @@
+PODS:
+  - SocketRocket (0.6.1)
+  - SpeechEngineToB (0.0.14.1-bugfix):
+    - SocketRocket
+
+DEPENDENCIES:
+  - SocketRocket (= 0.6.1)
+  - SpeechEngineToB (= 0.0.14.1-bugfix)
+
+SPEC REPOS:
+  https://github.com/volcengine/volcengine-specs.git:
+    - SpeechEngineToB
+  trunk:
+    - SocketRocket
+
+SPEC CHECKSUMS:
+  SocketRocket: f32cd54efbe0f095c4d7594881e52619cfe80b17
+  SpeechEngineToB: 48259196dfee4a417c7e4ee562fe650263400aff
+
+PODFILE CHECKSUM: 5186b73bca782a7beb0658d86a07a65a9a557759
+
+COCOAPODS: 1.16.2
