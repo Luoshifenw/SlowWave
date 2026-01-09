@@ -10,11 +10,39 @@
 	<string>$(VOLC_APP_KEY)</string>
 	<key>VOLC_TTS_VOICE_TYPE</key>
 	<string>$(VOLC_TTS_VOICE_TYPE)</string>
+	<key>VOLC_DIALOG_TTS_SPEAKER</key>
+	<string>$(VOLC_DIALOG_TTS_SPEAKER)</string>
 	<key>VOLC_TTS_SPEECH_RATE</key>
 	<string>$(VOLC_TTS_SPEECH_RATE)</string>
 	<key>VOLC_TTS_LOUDNESS_RATE</key>
 	<string>$(VOLC_TTS_LOUDNESS_RATE)</string>
 	<key>VOLC_TTS_EMOTION</key>
 	<string>$(VOLC_TTS_EMOTION)</string>
+	<key>VOLC_TTS_RESOURCE_ID</key>
+	<string>$(VOLC_TTS_RESOURCE_ID)</string>
+	<key>VOLC_TTS_CLUSTER</key>
+	<string>$(VOLC_TTS_CLUSTER)</string>
+	<key>VOLC_TTS_ENDPOINT</key>
+	<string>$(VOLC_TTS_ENDPOINT)</string>
+	<key>VOLC_TTS_STREAM_ENDPOINT</key>
+	<string>$(VOLC_TTS_STREAM_ENDPOINT)</string>
+	<key>VOLC_TTS_STREAM_SCHEME</key>
+	<string>$(VOLC_TTS_STREAM_SCHEME)</string>
+	<key>VOLC_TTS_STREAM_HOST</key>
+	<string>$(VOLC_TTS_STREAM_HOST)</string>
+	<key>VOLC_TTS_STREAM_PATH</key>
+	<string>$(VOLC_TTS_STREAM_PATH)</string>
+	<key>ARK_BASE_URL</key>
+	<string>$(ARK_BASE_URL)</string>
+	<key>ARK_BASE_SCHEME</key>
+	<string>$(ARK_BASE_SCHEME)</string>
+	<key>ARK_BASE_HOST</key>
+	<string>$(ARK_BASE_HOST)</string>
+	<key>ARK_BASE_PATH</key>
+	<string>$(ARK_BASE_PATH)</string>
+	<key>ARK_MODEL</key>
+	<string>$(ARK_MODEL)</string>
+	<key>ARK_API_KEY</key>
+	<string>$(ARK_API_KEY)</string>
 </dict>
 </plist>

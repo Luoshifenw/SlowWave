@@ -10,6 +10,7 @@ final class SpeechEngineManager: NSObject {
     var onUserInterrupt: (() -> Void)?
     var onTopicReady: (() -> Void)?
     var onEngineStarted: (() -> Void)?
+    var onTranscriptUpdated: ((String) -> Void)?
 
     #if canImport(SpeechEngineToB)
     private var engine: SpeechEngine?
@@ -31,7 +32,7 @@ final class SpeechEngineManager: NSObject {
         }
 
         _ = engine?.send(SEDirectiveSyncStopEngine)
-        let speaker = VolcConfig.ttsVoiceType
+        let speaker = VolcConfig.dialogTTSSpeaker
         let ttsJSON = speaker.isEmpty ? "" : ",\"tts\":{\"speaker\":\"\(speaker)\"}"
         let startParams = """
         {"dialog":{"bot_name":"\(VolcConfig.botName)","system_role":"助眠陪伴者","speaking_style":"极慢语速、每句停顿2秒、极低声、语调近乎单调、每句不超过6个字"}\(ttsJSON)}
@@ -81,6 +82,10 @@ extension SpeechEngineManager: SpeechEngineDelegate {
             case SEEventASRInfo:
                 self.onSpeechStart?()
                 self.onUserInterrupt?()
+            case SEEventASRResponse:
+                if let text = Self.parseASRText(from: data) {
+                    self.onTranscriptUpdated?(text)
+                }
             case SEEventASREnded:
                 self.onSpeechEnd?()
                 self.onTopicReady?()
@@ -88,6 +93,19 @@ extension SpeechEngineManager: SpeechEngineDelegate {
                 break
             }
         }
+    }
+
+    private static func parseASRText(from data: Data) -> String? {
+        guard
+            let json = try? JSONSerialization.jsonObject(with: data, options: []),
+            let dict = json as? [String: Any],
+            let results = dict["results"] as? [[String: Any]],
+            let first = results.first,
+            let text = first["text"] as? String
+        else {
+            return nil
+        }
+        return text.trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
 #endif

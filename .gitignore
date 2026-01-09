@@ -10,3 +10,4 @@ Pods/
 
 # Secrets
 Config.xcconfig
+SlowWave/Config.xcconfig
